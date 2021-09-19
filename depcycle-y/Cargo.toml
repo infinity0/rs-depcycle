@@ -1,0 +1,14 @@
+[package]
+name = "depcycle-y"
+version = "1.0.0"
+authors = ["Ximin Luo"]
+edition = "2018"
+description = "Example of a crate-level cyclic dependency; see README.md for details."
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+depcycle-x = { path = "../depcycle-x", optional = true, version = "1" }
+
+[features]
+x = ["depcycle-x"]
